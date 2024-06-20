@@ -2,6 +2,7 @@
 
 import React, { Dispatch, SyntheticEvent, useContext, useState } from "react";
 import { useRouter } from "next/navigation";
+import PintataUpload from "./Piniata";
 import { SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
 import { useAccount } from "wagmi";
 import { ClockIcon, DocumentTextIcon, MapPinIcon } from "@heroicons/react/24/outline";
@@ -123,6 +124,7 @@ const CheckinForm = ({ latLng = [0, 0], setIsTxLoading }: { latLng: number[]; se
               onChange={handleChange}
             />
           </label>
+          <PintataUpload />
           <input type="submit" value="Record Log Entry" className="input btn btn-primary bg-primary" />
         </form>
       </div>
